@@ -51,7 +51,7 @@ exports.up = async function(knex) {
     })
     .createTable('math_tests', tbl => {
         tbl.increments('mt_id')
-        tbl.datetime('wt_date').notNullable()
+        tbl.datetime('mt_date').notNullable()
         tbl.string('mt_test_type').defaultTo('counting').notNullable()
         tbl.integer('mt_score', 5)
         tbl.string('mt_comments', 300)
